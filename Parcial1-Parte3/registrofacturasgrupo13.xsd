@@ -62,21 +62,13 @@
     </xs:complexType>
     <!--Tipo de dato complejo dui-->
     <xs:complexType name="tipodui">
-      <xs:choice>
-        <xs:restriction base="xs:string">
-          <xs:pattern value="/^[0-9]{8}-[0-9]{1}$/"></xs:pattern>
-        </xs:restriction>
-      </xs:choice>
       <xs:attribute name="vence" type="xs:date"/>
+      <!--<xs:pattern value="/^[0-9]{8}-[0-9]{1}$/"></xs:pattern>-->
     </xs:complexType>
     <!--Tipo de dato complejo pasaporte-->
     <xs:complexType name="tipopasaporte">
-      <xs:sequence>
-        <xs:restriction base="xs:string">
-          <xs:pattern value="/^[A-Z]{1}[0-9]{8}$/"></xs:pattern>
-        </xs:restriction>
-      </xs:sequence>
       <xs:attribute name="pais" type="xs:string"/>
+      <!--<xs:pattern value="/^[A-Z]{1}[0-9]{8}$/"></xs:pattern>-->
     </xs:complexType>
     <!--Grupo para tipo de telefono-->
     <xs:group name="grupotelefono">
