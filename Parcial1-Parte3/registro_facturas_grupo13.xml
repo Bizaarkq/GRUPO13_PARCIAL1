@@ -6,12 +6,14 @@
   
   <factura tipo="final">
     <num>564</num>
-    <cliente codigo="2617" sexo="femenino">
+    <cliente codigo="001" sexo="femenino">
       <nombre>María Vélez</nombre>
       <documento>
         <dui vence="2018-03-03">02349867-9</dui>
       </documento>
-      <telefono tipo="fijo">24356789</telefono>
+      <telefonos>
+        <telfcasa >22252222</telfcasa>
+      </telefonos>
       <email>mariav@gmail.com</email>
     </cliente>
     <direccion depto="San Salvador" municipio="San Salvador">
@@ -38,12 +40,14 @@
   
   <factura tipo="credito">
     <num>570</num>
-    <cliente codigo="5032" sexo="femenino">
+    <cliente codigo="002" sexo="femenino">
       <nombre>Julia Pérez</nombre>
       <documento>
         <pasaporte pais="USA">A98672340</pasaporte>
       </documento>
-      <telefono tipo="celular" cia="tigo">78354926</telefono>
+      <telefonos>
+        <telfcelular agencia="movistar">78757471</telfcelular>
+      </telefonos>
       <email>jperez@sica.com</email>
     </cliente>
     <direccion depto="La Libertad" municipio="Antiguo Cuscatlan">
@@ -70,12 +74,14 @@
   
   <factura tipo="credito">
     <num>575</num>
-    <cliente codigo="5327" sexo="masculino">
+    <cliente codigo="003" sexo="masculino">
       <nombre>Jhon Smith</nombre>
       <documento>
         <pasaporte pais="USA">A98670234</pasaporte>
       </documento>
-    <telefono tipo="celular" cia="tigo">78923546</telefono>
+      <telefonos>
+        <telfcasa>21202222</telfcasa>
+      </telefonos>
     <email>jsmith@usaid.com</email>
     </cliente>
     <direccion depto="La Libertad" municipio="Santa Tecla">
@@ -102,12 +108,14 @@
   
   <factura tipo="final">
     <num>590</num>
-    <cliente codigo="617" sexo="masculino">
+    <cliente codigo="004" sexo="masculino">
       <nombre>Juan Pérez</nombre>
       <documento>
         <pasaporte pais="SLV">A40298367</pasaporte>
       </documento>
-      <telefono tipo="celular" cia="claro">76023546</telefono>
+      <telefonos>
+        <telfcasa >20212223</telfcasa>
+      </telefonos>
       <email>jperez@gmail.com</email>
     </cliente>
     <lineafactura factura="590">
@@ -131,12 +139,14 @@
   
   <factura tipo="final">
     <num>593</num>
-    <cliente codigo="177" sexo="masculino">
+    <cliente codigo="005" sexo="masculino">
       <nombre>Pedro Portillo</nombre>
       <documento>
        <pasaporte pais="SLV">A43698027</pasaporte>
       </documento>
-      <telefono tipo="celular" cia="claro">76028642</telefono>
+      <telefonos>
+        <telfcasa >24252627</telfcasa>
+      </telefonos>
       <email>pportillo@hotmail.com</email>
     </cliente>
     <lineafactura factura="593">
@@ -160,12 +170,14 @@
   
   <factura tipo="credito">
     <num>585</num>
-    <cliente codigo="5327" sexo="masculino">
+    <cliente codigo="006" sexo="masculino">
       <nombre>Jhon Smith</nombre>
       <documento>
         <dui vence="2018-06-03">02810867-0</dui>
       </documento>
-      <telefono tipo="celular" cia="tigo">78923546</telefono>
+      <telefonos>
+        <telfcasa >25262728</telfcasa>
+      </telefonos>
       <email>jsmith@usaid.com</email>
     </cliente>
     <direccion depto="La Libertad" municipio="Santa Tecla">
@@ -192,12 +204,14 @@
   
   <factura tipo="final">
     <num>501</num>
-    <cliente codigo="718" sexo="femenino">
+    <cliente codigo="007" sexo="femenino">
       <nombre>Marta Alicia</nombre>
       <documento>
         <pasaporte pais="SLV">B40292519</pasaporte>
       </documento>
-      <telefono tipo="celular" cia="digicel">76782346</telefono>
+      <telefonos>
+        <telfcelular agencia="tigo">71757471</telfcelular>
+      </telefonos>
       <email>marticia@yahoo.com</email>
     </cliente>
     <direccion depto="Ahuachapán" municipio="Apaneca">
@@ -224,12 +238,14 @@
 
   <factura tipo="final">
     <num>469</num>
-    <cliente codigo="529" sexo="masculino">
+    <cliente codigo="008" sexo="masculino">
       <nombre>Marco Florencio</nombre>
       <documento>
         <dui vence="2028-09-13">02813717-0</dui>
       </documento>
-      <telefono tipo="fijo">25252525</telefono>
+      <telefonos>
+        <telfcelular agencia="claro">79754471</telfcelular>
+      </telefonos>
       <email>mflowren@outlook.com</email>
     </cliente>
     <lineafactura factura="469">
@@ -253,12 +269,14 @@
 
   <factura tipo="credito">
     <num>618</num>
-    <cliente codigo="9115" sexo="masculino">
+    <cliente codigo="009" sexo="masculino">
       <nombre>Samuel Herrón</nombre>
       <documento>
         <pasaporte pais="USA">U99125581</pasaporte>
       </documento>
-      <telefono tipo="celular" cia="movistar">79268598</telefono>
+      <telefonos>
+        <telfcelular agencia="movistar">61757471</telfcelular>
+      </telefonos>
       <email>serronel@oracle.com</email>
     </cliente>
     <direccion depto="Chalatenango" municipio="Agua Caliente">
@@ -285,12 +303,14 @@
 
   <factura tipo="credito">
     <num>672</num>
-    <cliente codigo="1123" sexo="femenino">
+    <cliente codigo="100" sexo="femenino">
       <nombre>Maria Mendoza</nombre>
       <documento>
         <dui vence="2030-12-29">15582763-6</dui>
       </documento>
-      <telefono tipo="fijo">28256931</telefono>
+      <telefonos>
+        <telfcelular agencia="digicel">73217471</telfcelular>
+      </telefonos>
       <email>maridoza@outlook.com</email>
     </cliente>
     <lineafactura factura="672">

@@ -34,7 +34,10 @@
       <xs:sequence>
         <xs:element name="nombre" type="xs:string"/>
         <xs:element name="documento" type="tipodocumento"/>
-        <xs:group   ref="grupotelefono"/>
+        <!--<xs:choice>
+          <xs:group  ref="grupotelefono"/>
+        </xs:choice>-->
+        <xs:element name="telefonos" type="tipotelefono" minOccurs="0"/>
         <xs:element name="email" type="correo"/>
       </xs:sequence>
       <xs:attribute name="codigo" type="codigo" use="required"/>
@@ -43,73 +46,102 @@
     <!--Tipo de dato simple codigo-->
     <xs:simpleType name="codigo">
       <xs:restriction base="xs:string">
-        <xs:pattern value="/^[0-9]{3}$/"></xs:pattern>
+        <xs:pattern value="[0-9]{3}"></xs:pattern>
       </xs:restriction>
     </xs:simpleType>
     <!--Tipo de dato simple genero-->
     <xs:simpleType name="genero">
       <xs:restriction base="xs:string">
-        <xs:enumeration value="Masculino"/>
-        <xs:enumeration value="Femenino"/>
+        <xs:enumeration value="masculino"/>
+        <xs:enumeration value="femenino"/>
       </xs:restriction>
     </xs:simpleType>
-    <!--Tipo de dato complejo "tipodocumento"-->
+
+    <!--Tipo de dato complejo dui-->
     <xs:complexType name="tipodocumento">
       <xs:choice>
-        <xs:element name="dui" type="tipodui"/>
-        <xs:element name="pasaporte" type="tipopasaporte"/>
+        <xs:element name="dui">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="tipodui">
+                <xs:attribute name="vence" type="xs:date" use="required"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pasaporte">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="tipopasaporte">
+                <xs:attribute name="pais" type="xs:string" use="required"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
-    <!--Tipo de dato complejo dui-->
-    <xs:complexType name="tipodui">
-      <xs:attribute name="vence" type="xs:date"/>
-      <!--<xs:pattern value="/^[0-9]{8}-[0-9]{1}$/"></xs:pattern>-->
-    </xs:complexType>
-    <!--Tipo de dato complejo pasaporte-->
-    <xs:complexType name="tipopasaporte">
-      <xs:attribute name="pais" type="xs:string"/>
-      <!--<xs:pattern value="/^[A-Z]{1}[0-9]{8}$/"></xs:pattern>-->
-    </xs:complexType>
+    <!--Tipo dui-->
+    <xs:simpleType name="tipodui">
+      <xs:restriction base="xs:string">
+        <xs:pattern value="[0-9]{8}-[0-9]{1}"></xs:pattern>
+      </xs:restriction>
+    </xs:simpleType>
+    <!--Tipo de dato pasaporte-->
+    <xs:simpleType name="tipopasaporte">
+      <xs:restriction base="xs:string">
+        <xs:pattern value="[A-Z]{1}[0-9]{8}"></xs:pattern>
+      </xs:restriction>
+    </xs:simpleType>
     <!--Grupo para tipo de telefono-->
     <xs:group name="grupotelefono">
       <xs:choice>
-        <xs:element name="telcasa" type="telefono"/>
-        <xs:element name="teloficina" type="telefono"/>
-        <xs:element name="telcel" type="telefono"/>
-        <xs:element name="otrote" type="telefono"/>
+        <xs:element name="telfcasa">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:pattern value="2[0-9]{7}"/>
+              <xs:totalDigits value="8"/>
+            </xs:restriction>  
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="telfcelular" > 
+          <xs:complexType >
+            <xs:simpleContent>
+              <xs:extension base="xs:integer">
+                <xs:attribute name="agencia" type="tipoagencia" use="required"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="telfofic" type="xs:integer"/>
       </xs:choice>
     </xs:group>
-
     <!--Tipo de dato telefono-->
-    <xs:simpleType name="telefono">
+    <xs:complexType name="tipotelefono">
+      <xs:sequence>
+        <xs:group ref="grupotelefono"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <!--Tipo de dato agencia-->
+    <xs:simpleType name="tipoagencia">
       <xs:restriction base="xs:string">
-        <xs:pattern value="[0-9]{4}-[0-9]{4}"></xs:pattern>
-      </xs:restriction>
-      <xs:attribute name="tipo" type="tipotelefono"></xs:attribute>
-    </xs:simpleType>
-    <!--Tipo de telefono-->
-    <xs:simpleType name="tipotelefono">
-      <xs:restriction base="xs:string">
-        <xs:enumeration value="Casa"/>
-        <xs:enumeration value="Oficina"/>
-        <xs:enumeration value="Celular"/>
-        <xs:enumeration value="Otro"/>
+        <xs:enumeration value="claro"/>
+        <xs:enumeration value="movistar"/>
+        <xs:enumeration value="digicel"/>
+        <xs:enumeration value="tigo"/>
       </xs:restriction>
     </xs:simpleType>
     <!--Tipo de dato correo-->
-    <xs:complexType name="correo" type="xs:string">
-      <xs:sequence>
+    <xs:simpleType name="correo">
         <xs:restriction base="xs:string">
-          <xs:pattern value="/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/"></xs:pattern>
+          <xs:pattern value="([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})"></xs:pattern>
         </xs:restriction>
-      </xs:sequence>
-    </xs:complexType>
+    </xs:simpleType>
   <!-- Fin de tipo de dato cliente -->
 
 
 
-  <!-- De acá en adelante :v-->
-  
+
   <!-- Tipo de dato Direccion-->
     <xs:complexType name="tipodir">
       <xs:choice>
