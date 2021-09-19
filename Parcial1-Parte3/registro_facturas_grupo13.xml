@@ -188,5 +188,127 @@
       <moneda>$</moneda>
       <valor>100.00</valor>
     </total>
-  </factura>  
+  </factura>
+  
+  <factura tipo="final">
+    <num>501</num>
+    <cliente codigo="718" sexo="femenino">
+      <nombre>Marta Alicia</nombre>
+      <documento>
+        <pasaporte pais="SLV">B40292519</pasaporte>
+      </documento>
+      <telefono tipo="celular" cia="digicel">76782346</telefono>
+      <email>marticia@yahoo.com</email>
+    </cliente>
+    <direccion depto="Ahuachapán" municipio="Apaneca">
+      <oficina>Av. 15 de Abril Norte</oficina>
+    </direccion>
+    <lineafactura factura="501">
+      <codigo tipo="perecedero">319</codigo>
+      <detalle>Pastelito de chocolate</detalle>
+      <cantidad>5</cantidad>
+      <precio>
+        <moneda>$</moneda>
+        <valor>0.35</valor>
+      </precio>
+      <subtotal>
+        <moneda>$</moneda>
+        <valor>1.75</valor>
+      </subtotal>
+    </lineafactura>
+    <total>
+      <moneda>$</moneda>
+      <valor>1.75</valor>
+    </total>
+  </factura>
+
+  <factura tipo="final">
+    <num>469</num>
+    <cliente codigo="529" sexo="masculino">
+      <nombre>Marco Florencio</nombre>
+      <documento>
+        <dui vence="2028-09-13">02813717-0</dui>
+      </documento>
+      <telefono tipo="fijo">25252525</telefono>
+      <email>mflowren@outlook.com</email>
+    </cliente>
+    <lineafactura factura="469">
+      <codigo tipo="pcescritorio">798</codigo>
+      <detalle>Lenovo m700sff</detalle>
+      <cantidad>3</cantidad>
+      <precio>
+        <moneda>$</moneda>
+        <valor>400.00</valor>
+      </precio>
+      <subtotal>
+        <moneda>$</moneda>
+        <valor>1200.00</valor>
+      </subtotal>
+    </lineafactura>
+    <total>
+      <moneda>$</moneda>
+      <valor>1200.00</valor>
+    </total>
+  </factura>
+
+  <factura tipo="credito">
+    <num>618</num>
+    <cliente codigo="9115" sexo="masculino">
+      <nombre>Samuel Herrón</nombre>
+      <documento>
+        <pasaporte pais="USA">U99125581</pasaporte>
+      </documento>
+      <telefono tipo="celular" cia="movistar">79268598</telefono>
+      <email>serronel@oracle.com</email>
+    </cliente>
+    <direccion depto="Chalatenango" municipio="Agua Caliente">
+      <oficina>Calle Tránsito Aguilar</oficina>
+    </direccion>
+    <lineafactura factura="618">
+      <codigo tipo="monitores">988</codigo>
+      <detalle>ASUS TUF Gaming VG32AQL1A</detalle>
+      <cantidad>1</cantidad>
+      <precio>
+        <moneda>$</moneda>
+        <valor>500.00</valor>
+      </precio>
+      <subtotal>
+        <moneda>$</moneda>
+        <valor>500.00</valor>
+      </subtotal>
+    </lineafactura>
+    <total>
+      <moneda>$</moneda>
+      <valor>500.00</valor>
+    </total>
+  </factura>
+
+  <factura tipo="credito">
+    <num>672</num>
+    <cliente codigo="1123" sexo="femenino">
+      <nombre>Maria Mendoza</nombre>
+      <documento>
+        <dui vence="2030-12-29">15582763-6</dui>
+      </documento>
+      <telefono tipo="fijo">28256931</telefono>
+      <email>maridoza@outlook.com</email>
+    </cliente>
+    <lineafactura factura="672">
+      <codigo tipo="accesorio_pc">165</codigo>
+      <detalle>Audifonos SONY</detalle>
+      <cantidad>2</cantidad>
+      <precio>
+        <moneda>$</moneda>
+        <valor>25.00</valor>
+      </precio>
+      <subtotal>
+        <moneda>$</moneda>
+        <valor>50.00</valor>
+      </subtotal>
+    </lineafactura>
+    <total>
+      <moneda>$</moneda>
+      <valor>50.00</valor>
+    </total>
+  </factura>
 </registro>

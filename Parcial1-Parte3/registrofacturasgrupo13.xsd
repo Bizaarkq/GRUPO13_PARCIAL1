@@ -150,7 +150,15 @@
   <!-- Tipo de dato Linea Factura-->
     <xs:complexType name="tipolineaf">
       <xs:sequence>
-        <xs:element name="codigo" type="tipocodigofactura"/>
+        <xs:element name="codigo">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="tipocodigofactura">
+                <xs:attribute name="tipo" type="tipocarac" use="required"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="detalle" type="xs:string"/>
         <xs:element name="cantidad" type="xs:positiveInteger"/>
         <xs:element name="precio" type="tipodinero"/>
@@ -159,14 +167,16 @@
       <xs:attribute name="factura" type="xs:positiveInteger"/>
     </xs:complexType>
     
-    <xs:complexType name="tipocodigofactura" >
-      <xs:attribute name="tipo" type="tipocarac" use="required"/>
-    </xs:complexType>
+    <xs:simpleType name="tipocodigofactura">
+      <xs:restriction base="xs:positiveInteger">
+        <xs:maxInclusive value="9999"/>
+      </xs:restriction>
+    </xs:simpleType>
 
     <xs:simpleType name="tipocarac">
       <xs:restriction base="xs:string">
         <xs:enumeration value="souvenir"/>
-        <xs:enumeration value="accesoio_pc"/>
+        <xs:enumeration value="accesorio_pc"/>
         <xs:enumeration value="pcportatiles"/>
         <xs:enumeration value="perecedero"/>
         <xs:enumeration value="pcescritorio"/>
