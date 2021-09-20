@@ -1,27 +1,103 @@
-table {
-    
-    	border-collapse: separate;
-    	width: 100%;
-    	border: 1px solid #000;
-	empty-cells: hide;
- }
- th {
-    width: 25%;
-    text-align: left;
-    vertical-align: top;
-    border: 1px solid black;
-    border-spacing: 0;
+.Table{
+
+    display: table;
+    border-collapse: collapse;
 
 }
-td {
-    width: 25%;
-    text-align: left;
-    vertical-align: top;
-    border-spacing: 0;
-    border-top: 1px solid white;
-    border-right: 1px solid white;
-    border-bottom: 1px solid white;
-    border-left: 1px solid white;
 
- }
+.Title{
+    display: table-caption;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    font-size: larger;
+}
+
+.Heading{
+    display: table-row;
+
+    font-weight: bold;
+
+    text-align: center;
+    border-width: thin;
+
+}
+
+.Row{
+
+   display: table-row; 
+   border-top: black 1px solid;
+  border-right: black 1px solid;
+  border-bottom: none;
+  border-left: black 1px solid;
+
+
+
+}
+
+
+.Row1{
+
+   display: table-row; 
+   border-right: rgb(0, 0, 0) 1px solid;
+   border-left: rgb(0, 0, 0) 1px solid;
+
+
+}
+
+.Row3{
+
+   display: table-row; 
+   border-top: black 1px solid;
+  border-right: black 1px solid;
+  border-bottom: black 1px solid;
+  border-left: black 1px solid;
+
+
+
+}
+
+.Cell{
+
+    display: table-cell;
+
+    border: solid;
+
+    border-width: thin;
+
+    padding-left: 5px;
+
+    padding-right: 5px;
+
+}
+
+
+.Cell1{
+
+   display: table-cell;
+
+   border: solid;
+
+   border-width:0ch;
+
+   padding-left: 5px;
+
+   padding-right: 5px;
+
+}
+
+
+.cell2{
+
+   display: table-cell;
+
+   border-width:0ch;
+
+   padding-left: 5px;
+
+   padding-right: 5px;
+
+}
 

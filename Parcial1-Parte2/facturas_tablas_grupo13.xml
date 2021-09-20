@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
-<!-- grupo  13-->
+<!-- grupo 13  -->
 <registro periodo="2012-03">
 		<responsable>Lic. Inocencio Pérez</responsable>
 		<factura tipo="final">
@@ -67,8 +67,6 @@
 <valor>1050.00</valor>
 </total>
 </factura>
-
-
 <factura tipo="credito">
 <num>575</num>
 <cliente codigo="5327" sexo="masculino">
@@ -100,8 +98,6 @@
 <valor>50.00</valor>
 </total>
 </factura>
-
-
 <factura tipo="final">
 <num>590</num>
 <cliente codigo="617" sexo="masculino">
@@ -130,8 +126,6 @@
 <valor>5.00</valor>
 </total>
 </factura>
-
-
 <factura tipo="final">
 <num>593</num>
 <cliente codigo="177" sexo="masculino">
@@ -160,8 +154,6 @@
 <valor>5.00</valor>
 </total>
 </factura>
-
-
 <factura tipo="credito">
 <num>585</num>
 <cliente codigo="5327" sexo="masculino">
