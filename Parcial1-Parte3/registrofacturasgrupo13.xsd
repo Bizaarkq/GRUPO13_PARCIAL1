@@ -4,7 +4,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element name="responsable" type="xs:string"/>
-        <xs:element name="factura" type="tipofactura"/>
+        <xs:element name="factura" type="tipofactura" maxOccurs="unbounded"/>
       </xs:sequence>
       <xs:attribute name="periodo" type="xs:string" use="required"/>
     </xs:complexType>
